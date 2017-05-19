@@ -14,7 +14,7 @@ function Player(turn) {
 Player.prototype.rollone = function() {
   if (this.roll === 1) {
     this.tempscore = 0;
-    alert("Sorry Player 1, you rolled a 1! Your turn is over!");
+    alert("Sorry, you rolled a 1! Your turn is over!");
     // this.changeturn();
   } else {
     this.tempscore += this.roll;
@@ -25,7 +25,7 @@ Player.prototype.hold = function() {
   this.totalscore += this.tempscore;
   this.tempscore = 0;
   // this.changeturn();
-  alert("Pass the mouse!");
+  alert("Pass the mouse!" || "Pass!");
 }; //Hold
 
 Player.prototype.winnerCheck = function() {
@@ -50,6 +50,7 @@ $(document).ready(function() {
     player2 = new Player(false);
     $(".playfield").show();
     $(".start").hide();
+    alert("Player 1 starts!");
   });
 
   $("button#new-game").click(function(event) {
@@ -72,6 +73,8 @@ $(document).ready(function() {
     $("#player1Streak").text(player1.roll);
     player1.rollone();
     $("#player1Current").text(player1.tempscore);
+    $("#player1").css("background-color", "#83db20");
+    $("#player2").css("background-color", "grey");
   });
 
   $("button#player2Button").click(function(event) {
@@ -80,10 +83,14 @@ $(document).ready(function() {
     $("#player2Streak").text(player2.roll);
     player2.rollone();
     $("#player2Current").text(player2.tempscore);
+    $("#player2").css("background-color", "#83db20");
+    $("#player1").css("background-color", "grey");
   });
 
   $("button#player1Pass").click(function(event) {
     player1.hold();
+    $("#player2").css("background-color", "#83db20");
+    $("#player1").css("background-color", "grey");
     $("#player1Score").text(player1.totalscore);
 //    $("#player1Current").empty();
     $("#player1Streak").empty();
@@ -92,6 +99,8 @@ $(document).ready(function() {
 
   $("button#player2Pass").click(function(event) {
     player2.hold();
+    $("#player1").css("background-color", "#83db20");
+    $("#player2").css("background-color", "grey");
     $("#player2Score").text(player2.totalscore);
 //    $("#player2Current").empty();
     $("#player2Streak").empty();
