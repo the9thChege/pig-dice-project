@@ -3,7 +3,7 @@
 }
 
 #start{
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 body{
@@ -34,7 +34,7 @@ body{
 }
 
 #player1Pass, #player2Pass{
-  margin-top: 150px;
+  margin-top: 20px;
 }
 
 h1{
@@ -48,4 +48,36 @@ h3{
 
 p{
   color: white;
+}
+
+li{
+  font-size: 24px;
+  font-family: fantasy;
+  color: #d42b20;
+}
+
+#luck{
+  font-size: 30px;
+  margin-top: 50px;
+  font-family: monotype corsiva;
+  color: #24a20f;
+}
+
+#p1_1, #p1_2, #p1_3, #p1_4, #p1_5, #p1_6, #p2_1, #p2_2, #p2_3, #p2_4, #p2_5, #p2_6{
+  display: none;
+}
+
+.player1Image, .player2Image{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 200px;
+  width: 240px;
+  background-color: transparent;
+}
+
+.rulesDiv{
+  background-blend-mode: soft-light;
+  background-color: #988a62;
+  border-radius: 20%;
+  display: none;
 }

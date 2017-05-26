@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.2.1.js"></script>
   <script src="js/scripts.js"></script>
@@ -12,17 +13,31 @@
 <body>
   <div class="start container">
     <center>
-    <h1>THE GAME: Pig Dice</h1>
-    <h2><u>THE RULES:</u></h2>
-    <ol>
-      1.<li>The aim of the game is for a player to reach 100 or more points which is calculated cumulatively from the random roll of a 6-sided die</li>
-      2.<li>However, if at any point, the current player rolls a "1", they score nothing for that round and have to forfeit their turn.</li>
-      <li>Basically, just DON'T roll a "1"!</li>
-      3.<li>You can "Hold" at any point to voluntarily end your turn. Pig Dice is about knowing when to NOT be greedy.</li>
-    </ol>
-    <p>GOOD LUCK!</p>
+      <h1>THE GAME: Pig Dice</h1>
 
       <button id="start" class="btn-info btn-lg">START: 2 PLAYER PIG-DICE</button>
+      <button id="rules" class="btn-danger btn-lg">THE RULES OF PIG-DICE</button>
+      <div class="rulesDiv">
+        <h2><u>THE RULES:</u></h2>
+        <div class="row">
+          <ul>
+            <div class="col-md-4">
+              1.
+              <li>The aim of the game is for a player to reach 100 or more points which is calculated cumulatively from the random roll of a 6-sided die</li>
+            </div>
+            <div class="col-md-4">
+              2.
+              <li>However, if at any point, the current player rolls a "1", they score nothing for that round and have to forfeit their turn.</li>
+              <li>Basically, just DON'T roll a "1"!</li>
+            </div>
+            <div class="col-md-4">
+              3.
+              <li>You can "Hold" at any point to voluntarily end your turn. Pig Dice is about knowing when to NOT be greedy.</li>
+            </div>
+          </ul>
+        </div>
+        <p id="luck">GOOD LUCK!</p>
+      </div>
     </center>
   </div>
 
@@ -34,6 +49,28 @@
       <div class="col-md-3">
         <button type="btn" class="btn-warning" id="player1Button">PLAYER 1: ROLL</button>
         <br>
+
+        <div class="player1Image">
+          <div class="" id="p1_1">
+            <img src="img/red_dice1.png" alt="1">
+          </div>
+          <div class="" id="p1_2">
+            <img src="img/red_dice2.png" alt="2">
+          </div>
+          <div class="" id="p1_3">
+            <img src="img/red_dice3.png" alt="3">
+          </div>
+          <div class="" id="p1_4">
+            <img src="img/red_dice4.png" alt="4">
+          </div>
+          <div class="" id="p1_5">
+            <img src="img/red_dice5.png" alt="5">
+          </div>
+          <div class="" id="p1_6">
+            <img src="img/red_dice6.png" alt="6">
+          </div>
+        </div>
+
         <button type="btn" class="btn-success" id="player1Pass">HOLD/PASS</button>
       </div>
       <div class="col-md-3" id="player1">
@@ -61,6 +98,14 @@
       <div class="col-md-3">
         <button type="btn" class="btn-success" id="player2Button">PLAYER 2: ROLL</button>
         <br>
+        <div class="player2Image">
+          <img src="img/red_dice1.png" alt="1" id="p2_1">
+          <img src="img/red_dice2.png" alt="1" id="p2_2">
+          <img src="img/red_dice3.png" alt="1" id="p2_3">
+          <img src="img/red_dice4.png" alt="1" id="p2_4">
+          <img src="img/red_dice5.png" alt="1" id="p2_5">
+          <img src="img/red_dice6.png" alt="1" id="p2_6">
+        </div>
         <button type="btn" class="btn-warning" id="player2Pass">HOLD/PASS</button>
       </div>
     </div>
